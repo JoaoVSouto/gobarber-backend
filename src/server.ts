@@ -1,7 +1,11 @@
 import express from 'express';
 
+import routes from './routes';
+
 const app = express();
 
-app.get('/', (req, res) => res.json({ hello: 'gostack' }));
+app.use(express.json());
+
+app.use(routes);
 
 app.listen(3333, () => console.log('Server listening on port 3333...'));
