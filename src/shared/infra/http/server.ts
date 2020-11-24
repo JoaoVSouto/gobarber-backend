@@ -4,6 +4,7 @@ import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 
 import '@shared/infra/typeorm';
+import '@shared/container';
 
 import uploadConfig from '@config/upload';
 
