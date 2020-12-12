@@ -122,3 +122,5 @@ tmp/*
 !tmp/uploads/.gitkeep
 
 TODO.md
+
+ormconfig.json
