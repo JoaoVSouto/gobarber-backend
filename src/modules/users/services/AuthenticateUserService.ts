@@ -15,7 +15,7 @@ interface IRequest {
 }
 
 interface IResponse {
-  user: Optional<User, 'password'>;
+  user: User;
   token: string;
 }
 
@@ -47,7 +47,7 @@ class AuthenticateUserService {
 
     const { expiresIn, secret } = authConfig.jwt;
 
-    const token = sign({}, secret, {
+    const token = sign({}, secret as string, {
       subject: user.id,
       expiresIn,
     });
